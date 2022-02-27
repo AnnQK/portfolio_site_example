@@ -20,4 +20,9 @@ a {
 ul {
   list-style: none;
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+}
 /*# sourceMappingURL=main.css.map */
