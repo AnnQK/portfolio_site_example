@@ -134,3 +134,50 @@ body {
   //   color: $lightColor;
   // }
 }
+
+// section works
+
+.section__container {
+  margin-top: 10rem;
+  text-align: center;
+  position: relative;
+  max-width: 100rem;
+  overflow: hidden;
+  height: 40rem;
+
+  &__item {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    transition: all 800ms;
+
+    &--title {
+      grid-row: 1/2;
+      grid-column: 3/4;
+    }
+
+    &--text {
+      grid-row: 2/3;
+      grid-column: 2/6;
+    }
+
+    &--img {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+
+    &--link {
+      grid-row: 3/4;
+      grid-column: 3/4;
+      font-weight: 100;
+      font-size: 1/5rem;
+      font-weight: 600;
+      color: $linkColor;
+    }
+  }
+}
