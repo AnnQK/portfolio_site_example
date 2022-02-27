@@ -181,3 +181,18 @@ body {
     }
   }
 }
+
+// section education
+
+.section__education {
+  height: 50rem;
+  &__list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.education {
+  font-weight: 600;
+}

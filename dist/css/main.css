@@ -235,4 +235,24 @@ body {
   font-weight: 600;
   color: #2c5364;
 }
+
+.section__education {
+  height: 50rem;
+}
+
+.section__education__list {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.education {
+  font-weight: 600;
+}
 /*# sourceMappingURL=main.css.map */
