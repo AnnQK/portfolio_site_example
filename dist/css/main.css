@@ -99,4 +99,43 @@ body {
   font-weight: 700;
   font-size: 3rem;
 }
+
+.section__header {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+  background: #123 url("../../assets/img/jpg/photo-1542401886-65d6c61db217.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: #e9ecef;
+  text-align: center;
+}
+
+.section__header__info {
+  width: 50%;
+  margin: auto;
+}
+
+.section__header__name {
+  font-size: 4rem;
+}
+
+.section__header__image {
+  margin: auto;
+}
+
+.image__hidden {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

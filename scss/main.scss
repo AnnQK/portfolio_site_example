@@ -73,3 +73,38 @@ body {
     font-size: 3rem;
   }
 }
+
+// section intro
+
+.section__header {
+  margin: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+  background: #123 url("../../assets/img/jpg/photo-1542401886-65d6c61db217.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: $lightColor;
+  text-align: center;
+
+  &__info {
+    width: 50%;
+    margin: auto;
+  }
+
+  &__name {
+    font-size: 4rem;
+  }
+
+  &__image {
+    margin: auto;
+  }
+}
+
+.image__hidden {
+  display: none;
+}
