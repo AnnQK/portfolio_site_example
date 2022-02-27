@@ -292,4 +292,40 @@ body {
   -webkit-transition: all 1000ms;
   transition: all 1000ms;
 }
+
+@media screen and (max-width: 820px) {
+  .header__site-logo,
+  .section__header__image {
+    display: none;
+  }
+  .header__container {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+  }
+  .section__header__info {
+    width: 100%;
+    padding: 1rem;
+  }
+  .section__header__name {
+    font-size: 3rem;
+  }
+  .section__header__description {
+    font-size: 1rem;
+    width: 70%;
+    margin: auto;
+  }
+  .section__contacts {
+    text-align: center;
+  }
+  .section__contacts__list {
+    padding: 0;
+    margin: auto;
+    gap: 0;
+  }
+  .section__contacts__item {
+    width: 100%;
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=main.css.map */
