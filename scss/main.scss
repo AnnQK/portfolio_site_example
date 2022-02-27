@@ -60,3 +60,16 @@ body {
     font-weight: 600;
   }
 }
+
+// section common styles
+
+.section {
+  width: 80%;
+  margin: auto;
+
+  &__title {
+    margin-top: 3rem;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+}
