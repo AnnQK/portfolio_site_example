@@ -9,3 +9,54 @@ body {
   // justify-content: space-between;
   // align-items: baseline;
 }
+
+// header
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: transparent;
+  color: $lightColor;
+  background: transparent;
+
+  &__container {
+    padding: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+  }
+  &__nav {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.7rem;
+
+      &-item {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: " ";
+          background: $lightColor;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 2px;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 250ms ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__site-logo {
+    margin-left: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}

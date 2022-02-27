@@ -25,4 +25,67 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: transparent;
+  color: #e9ecef;
+  background: transparent;
+}
+
+.header__container {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.header__nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.7rem;
+}
+
+.header__nav__list-item {
+  position: relative;
+}
+
+.header__nav__list-item::after {
+  position: absolute;
+  content: " ";
+  background: #e9ecef;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.header__site-logo {
+  margin-left: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 /*# sourceMappingURL=main.css.map */
