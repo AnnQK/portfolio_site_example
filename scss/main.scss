@@ -196,3 +196,24 @@ body {
 .education {
   font-weight: 600;
 }
+
+// contacts
+
+.section__contacts {
+  background: $darkColor;
+  color: $lightColor;
+  height: 15rem;
+  width: 100%;
+
+  &__container {
+    margin: auto;
+    width: 80%;
+  }
+
+  &__list {
+    padding-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

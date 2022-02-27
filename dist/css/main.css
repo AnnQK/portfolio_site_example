@@ -255,4 +255,29 @@ body {
 .education {
   font-weight: 600;
 }
+
+.section__contacts {
+  background: -webkit-gradient(linear, left top, right top, from(#2c5364), color-stop(#203a43), to(#0f2027));
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  color: #e9ecef;
+  height: 15rem;
+  width: 100%;
+}
+
+.section__contacts__container {
+  margin: auto;
+  width: 80%;
+}
+
+.section__contacts__list {
+  padding-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 /*# sourceMappingURL=main.css.map */
