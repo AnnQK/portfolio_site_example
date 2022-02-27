@@ -280,4 +280,16 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+
+.footer {
+  text-align: center;
+}
+
+.footer__link {
+  padding: 0 1rem;
+  margin: auto;
+  border-radius: 1rem;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
+}
 /*# sourceMappingURL=main.css.map */

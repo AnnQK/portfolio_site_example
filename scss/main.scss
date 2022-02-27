@@ -217,3 +217,16 @@ body {
     flex-wrap: wrap;
   }
 }
+
+// footer
+
+.footer {
+  text-align: center;
+
+  &__link {
+    padding: 0 1rem;
+    margin: auto;
+    border-radius: 1rem;
+    transition: all 1000ms;
+  }
+}
