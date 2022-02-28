@@ -88,3 +88,25 @@ const navigationObserver = new IntersectionObserver(
 navigationObserver.observe(sectionIntro);
 
 // section openning
+
+function openSection(entries, sectionObserver) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.remove("section--hidden");
+      sectionsObserver.unobserve(entry.target);
+    }
+  });
+}
+const sectionsOptions = {
+  root: null,
+  threshold: 0.1,
+};
+
+const sectionsObserver = new IntersectionObserver(openSection, sectionsOptions);
+
+sectionsAll.forEach((section) => {
+  sectionsObserver.observe(section);
+  section.classList.add("section--hidden");
+});
