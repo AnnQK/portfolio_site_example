@@ -65,6 +65,10 @@ body {
   }
 }
 
+.header--scrolled {
+  background: $darkColor;
+}
+
 // section common styles
 
 .section {
@@ -76,6 +80,12 @@ body {
     font-weight: 700;
     font-size: 3rem;
   }
+
+  transition: all 1000ms;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(10rem);
 }
 
 // section intro
@@ -184,6 +194,35 @@ body {
       color: $linkColor;
     }
   }
+}
+
+.dots {
+  position: absolute;
+  bottom: 43%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+
+  &__dot {
+    border: none;
+    background-color: $inactiveBtn;
+    opacity: 0.7;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    transition: all 300ms;
+
+    &:hover {
+      background-color: $activeBtn;
+    }
+  }
+}
+
+.dots__dot--active {
+  background-color: $activeBtn;
+  opacity: 1;
 }
 
 // section education
