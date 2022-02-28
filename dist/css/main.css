@@ -96,6 +96,11 @@ body {
   font-weight: 600;
 }
 
+.header--scrolled {
+  background: -webkit-gradient(linear, left top, right top, from(#2c5364), color-stop(#203a43), to(#0f2027));
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
 .section {
   width: 80%;
   margin: auto;
