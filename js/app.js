@@ -8,6 +8,7 @@ const dotsContainer = document.querySelector(".dots");
 const headersLinks = document.querySelector(".header");
 const sectionIntro = document.querySelector(".section__header");
 const headerHeight = headersLinks.offsetHeight;
+const sectionsAll = document.querySelectorAll(".section--openning");
 
 // place works slides
 
@@ -85,3 +86,5 @@ const navigationObserver = new IntersectionObserver(
 );
 
 navigationObserver.observe(sectionIntro);
+
+// section openning

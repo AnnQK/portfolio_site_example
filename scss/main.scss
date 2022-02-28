@@ -80,6 +80,12 @@ body {
     font-weight: 700;
     font-size: 3rem;
   }
+
+  transition: all 1000ms;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(10rem);
 }
 
 // section intro
