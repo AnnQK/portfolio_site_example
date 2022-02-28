@@ -6,6 +6,8 @@ const lastSlide = slides.length - 1;
 let currentSlide = 0;
 const dotsContainer = document.querySelector(".dots");
 const headersLinks = document.querySelector(".header");
+const sectionIntro = document.querySelector(".section__header");
+const headerHeight = headersLinks.offsetHeight;
 
 // place works slides
 
@@ -58,3 +60,5 @@ headersLinks.addEventListener("click", function (event) {
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
 });
+
+// Sticky navigation
