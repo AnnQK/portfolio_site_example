@@ -62,3 +62,26 @@ headersLinks.addEventListener("click", function (event) {
 });
 
 // Sticky navigation
+
+const navigationOptions = {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${headerHeight + 5}px`,
+};
+
+function stickyNav(entries, navigationObserver) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      headersLinks.classList.add("header--scrolled");
+    } else {
+      headersLinks.classList.remove("header--scrolled");
+    }
+  });
+}
+
+const navigationObserver = new IntersectionObserver(
+  stickyNav,
+  navigationOptions
+);
+
+navigationObserver.observe(sectionIntro);
