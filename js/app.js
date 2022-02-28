@@ -28,3 +28,22 @@ function createDots() {
 }
 
 createDots();
+
+function activeBtn(slide) {
+  document.querySelectorAll(".dots__dot").forEach((dot) => {
+    dot.classList.remove("dots__dot--active");
+  });
+  document
+    .querySelector(`.dots__dot[data-slide="${slide}"]`)
+    .classList.add("dots__dot--active");
+}
+
+activeBtn(0);
+
+dotsContainer.addEventListener("click", function (event) {
+  if (event.target.classList.contains("dots__dot")) {
+    const selectedSlide = event.target.dataset.slide;
+    goToSlide(selectedSlide);
+    activeBtn(selectedSlide);
+  }
+});
