@@ -14,8 +14,6 @@ function goToSlide(slide) {
   });
 }
 
-goToSlide(0);
-
 // Create dots
 
 function createDots() {
@@ -27,8 +25,6 @@ function createDots() {
   });
 }
 
-createDots();
-
 function activeBtn(slide) {
   document.querySelectorAll(".dots__dot").forEach((dot) => {
     dot.classList.remove("dots__dot--active");
@@ -38,7 +34,7 @@ function activeBtn(slide) {
     .classList.add("dots__dot--active");
 }
 
-activeBtn(0);
+// slider events
 
 dotsContainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("dots__dot")) {
@@ -47,3 +43,7 @@ dotsContainer.addEventListener("click", function (event) {
     activeBtn(selectedSlide);
   }
 });
+
+goToSlide(0);
+createDots();
+activeBtn(0);
