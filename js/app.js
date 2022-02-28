@@ -50,3 +50,11 @@ createDots();
 activeBtn(0);
 
 // Smooth scrolling
+
+headersLinks.addEventListener("click", function (event) {
+  if (event.target.classList.contains("header__nav__link")) {
+    event.preventDefault();
+    const id = event.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
