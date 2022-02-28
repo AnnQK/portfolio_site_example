@@ -15,3 +15,16 @@ function goToSlide(slide) {
 }
 
 goToSlide(0);
+
+// Create dots
+
+function createDots() {
+  slides.forEach((_, index) => {
+    dotsContainer.insertAdjacentHTML(
+      "beforeend",
+      `<button class="dots__dot" data-slide="${index}"></button>`
+    );
+  });
+}
+
+createDots();
