@@ -5,6 +5,7 @@ const slides = document.querySelectorAll(".section__container__item");
 const lastSlide = slides.length - 1;
 let currentSlide = 0;
 const dotsContainer = document.querySelector(".dots");
+const headersLinks = document.querySelector(".header");
 
 // place works slides
 
@@ -47,3 +48,5 @@ dotsContainer.addEventListener("click", function (event) {
 goToSlide(0);
 createDots();
 activeBtn(0);
+
+// Smooth scrolling
