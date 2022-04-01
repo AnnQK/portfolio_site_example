@@ -1,8 +1,8 @@
-@import "variables", "reset";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import 'variables', 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.125rem;
   // display: flex;
   // flex-direction: column;
@@ -40,7 +40,7 @@ body {
         position: relative;
         &::after {
           position: absolute;
-          content: " ";
+          content: ' ';
           background: $lightColor;
           left: 0;
           bottom: -2px;
@@ -83,6 +83,7 @@ body {
 
   transition: all 1000ms;
 }
+
 .section--hidden {
   opacity: 0;
   transform: translateY(10rem);
@@ -98,7 +99,7 @@ body {
   flex-wrap: wrap;
   height: 100vh;
   width: 100%;
-  background: #123 url("../../assets/img/jpg/photo-1542401886-65d6c61db217.jpg");
+  background: #123 url('../assets/img/jpg/photo-1542401886-65d6c61db217.jpg');
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;
@@ -265,7 +266,7 @@ body {
   position: relative;
   &::after {
     position: absolute;
-    content: " ";
+    content: ' ';
     background: $lightColor;
     left: 0;
     bottom: -2px;

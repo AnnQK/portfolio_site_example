@@ -1,14 +1,15 @@
-"use strict";
+'use strict';
+import './scss/main.scss';
 
-const slider = document.querySelector(".section__container");
-const slides = document.querySelectorAll(".section__container__item");
+const slider = document.querySelector('.section__container');
+const slides = document.querySelectorAll('.section__container__item');
 const lastSlide = slides.length - 1;
 let currentSlide = 0;
-const dotsContainer = document.querySelector(".dots");
-const headersLinks = document.querySelector(".header");
-const sectionIntro = document.querySelector(".section__header");
+const dotsContainer = document.querySelector('.dots');
+const headersLinks = document.querySelector('.header');
+const sectionIntro = document.querySelector('.section__header');
 const headerHeight = headersLinks.offsetHeight;
-const sectionsAll = document.querySelectorAll(".section--openning");
+const sectionsAll = document.querySelectorAll('.section--openning');
 
 // place works slides
 
@@ -23,25 +24,25 @@ function goToSlide(slide) {
 function createDots() {
   slides.forEach((_, index) => {
     dotsContainer.insertAdjacentHTML(
-      "beforeend",
+      'beforeend',
       `<button class="dots__dot" data-slide="${index}"></button>`
     );
   });
 }
 
 function activeBtn(slide) {
-  document.querySelectorAll(".dots__dot").forEach((dot) => {
-    dot.classList.remove("dots__dot--active");
+  document.querySelectorAll('.dots__dot').forEach((dot) => {
+    dot.classList.remove('dots__dot--active');
   });
   document
     .querySelector(`.dots__dot[data-slide="${slide}"]`)
-    .classList.add("dots__dot--active");
+    .classList.add('dots__dot--active');
 }
 
 // slider events
 
-dotsContainer.addEventListener("click", function (event) {
-  if (event.target.classList.contains("dots__dot")) {
+dotsContainer.addEventListener('click', function (event) {
+  if (event.target.classList.contains('dots__dot')) {
     const selectedSlide = event.target.dataset.slide;
     goToSlide(selectedSlide);
     activeBtn(selectedSlide);
@@ -54,11 +55,11 @@ activeBtn(0);
 
 // Smooth scrolling
 
-headersLinks.addEventListener("click", function (event) {
-  if (event.target.classList.contains("header__nav__link")) {
+headersLinks.addEventListener('click', function (event) {
+  if (event.target.classList.contains('header__nav__link')) {
     event.preventDefault();
-    const id = event.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    const id = event.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
 
@@ -73,9 +74,9 @@ const navigationOptions = {
 function stickyNav(entries, navigationObserver) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
-      headersLinks.classList.add("header--scrolled");
+      headersLinks.classList.add('header--scrolled');
     } else {
-      headersLinks.classList.remove("header--scrolled");
+      headersLinks.classList.remove('header--scrolled');
     }
   });
 }
@@ -94,7 +95,7 @@ function openSection(entries, sectionObserver) {
     if (!entry.isIntersecting) {
       return;
     } else {
-      entry.target.classList.remove("section--hidden");
+      entry.target.classList.remove('section--hidden');
       sectionsObserver.unobserve(entry.target);
     }
   });
@@ -108,5 +109,5 @@ const sectionsObserver = new IntersectionObserver(openSection, sectionsOptions);
 
 sectionsAll.forEach((section) => {
   sectionsObserver.observe(section);
-  section.classList.add("section--hidden");
+  section.classList.add('section--hidden');
 });
